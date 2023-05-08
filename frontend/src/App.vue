@@ -92,20 +92,4 @@ export default {
 };
 </script>
 <style>
-@font-face {
-  font-family: KingPowerHeadline-Regular;
-  src: url("./assets/font/KingPowerHeadline-Regular.ttf");
-}
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-body,
-html {
-  font-family: KingPowerHeadline-Regular !important;
-}
-
-
 </style>
