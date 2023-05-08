@@ -1,0 +1,94 @@
+<template>
+  <b-container>
+    <!-- <div>
+      <button @click="counter++">Increase</button>
+      <p v-if="output">{{ output }}</p>
+    </div> -->
+    <section class="page_404">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12" style="text-align: -webkit-center">
+            <div class="col-sm-10 col-sm-offset-1 text-center">
+              <div class="four_zero_four_bg">
+                <h1 class="text-center">404</h1>
+              </div>
+              <div class="contant_box_404">
+                <h3 class="h2">Look like you're lost</h3>
+                <p>the page you are looking for not avaible!</p>
+                <!-- <a href="#" class="link_404">Go to Home</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </b-container>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      counter: 0,
+    }
+  },
+  // computed: {
+  //   output() {
+  //     console.log(this.counter);
+  //     return this.counter
+  //   }
+  // },
+  // watch: {
+  //   counter: (val) =>{
+  //     console.log(val);
+  //   }
+  // }
+};
+</script>
+
+<style lang="scss" scoped>
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+}
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+  font-weight: bold;
+  border: 2px solid #39bc61;
+  transition: 0.3s ease-in-out;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.link_404:hover {
+  text-decoration: none;
+  border-color: #39bc61;
+  background: transparent;
+  color: #39bc61 !important;
+}
+.contant_box_404 {
+  margin-top: -50px;
+}
+</style>
