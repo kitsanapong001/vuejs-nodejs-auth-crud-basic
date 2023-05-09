@@ -1,15 +1,14 @@
 const sql = require("../models/db");
 
 checkDuplicateEmail = (req, res, next) => {
-    const username = req.body.username;
-    const email = req.body.email;
+    const username = req.body.user_username;
+    const email = req.body.user_email;
 
     let conditionUsername = '';
     let conditionEmail = '';
 
     conditionUsername = `SELECT * FROM users WHERE user_username = '${username}'`;
-    conditionEmail = `SELECT * FROM users WHERE user_email= '${email}'`;
-    
+    conditionEmail = `SELECT * FROM users WHERE user_email = '${email}'`;
     sql.query(conditionUsername, (err, resultUser) => {
         if (err) {
             console.log("error: ", err);

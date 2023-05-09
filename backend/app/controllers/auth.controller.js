@@ -10,6 +10,7 @@ moment.locale('th');
 
 
 exports.signup = async (req, res) => {
+
   const dataUsers = {
     user_username : req.body.user_username,
     user_password : bcrypt.hashSync(req.body.user_password, 8),
@@ -32,7 +33,6 @@ exports.signup = async (req, res) => {
 exports.signin = async (req, res) => {
   var user_username = req.body.user_username;
   var user_password = req.body.user_password;
-
   sql.query(`SELECT * FROM users a LEFT JOIN roles b ON a.role_id = b.role_id WHERE user_username = '${user_username}'`, (err, result) => {
     if (err) {
         console.log("error: ", err);
